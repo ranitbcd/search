@@ -14,6 +14,7 @@ export class AppComponent {
   public dataSource:any;
   constructor(private api:ServerService){}
   ngOnInit(){
-    this.dataSource=this.api.getuser().subscribe()
+    //this.dataSource=this.api.getuser().subscribe()
+    this.api.getuser().subscribe(data=>this.dataSource=data)
   }
 }
