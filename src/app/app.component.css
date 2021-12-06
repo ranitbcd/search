@@ -6,7 +6,9 @@ table {
     color: black;
   }
 
-
+  mat-form-field{
+   padding-right: 30px;
+  }
   :host {
     display: flex;
     flex-direction: column;
