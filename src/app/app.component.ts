@@ -8,6 +8,7 @@ import {ServerService} from './server.service';
 
 export class AppComponent {
 
+  filterTerm: string;
 
   displayedColumns: string[] = ['uname','city','contact_no','trade','sem'];
   // dataSource = ELEMENT_DATA;

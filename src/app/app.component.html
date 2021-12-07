@@ -4,7 +4,7 @@
 <div>
   <mat-form-field appearance="fill">
   <mat-label>Full Name</mat-label>
-  <input matInput >
+  <input matInput placeholder="Search" [(ngModel)]="filterTerm">
 </mat-form-field>
 <mat-form-field appearance="fill">
   <mat-label>City</mat-label>
@@ -21,7 +21,7 @@
     <mat-option value="two">></mat-option>
   </mat-select>
 </mat-form-field>
-<!-- <input type="submit" value="search"> -->
+
 <button mat-raised-button color ="primary" type="submit" style="margin-left: 20px; margin-bottom: 10px;">Search</button>
 </div>
 
@@ -54,7 +54,7 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row ;  columns: displayedColumns  | filter:filterTerm; ;"></tr>
 </table>
 
 
